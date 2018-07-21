@@ -6,12 +6,12 @@ function rule_factory(grammar){
 			this.exec = exec || null;
 		}
 
-		acceptsSubRules(off){
-			this.subtokens = (typeof off === "undefined") ? true : off;
+		acceptsSubRules(off=true){
+			this.subtokens = off;
 			return this;
 		}
 
-		sub(off){
+		sub(off=true){
 			return this.acceptsSubRules(off);
 		}
 

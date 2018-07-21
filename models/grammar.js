@@ -14,7 +14,7 @@ class Grammar {
 
 	parse(query){
 		let lex = this.Lexer(this.__tokens, query);
-		return this.Parser(lex, this.__rules);
+		return this.Parser(this.__rules, lex);
 	}
 
 	__token(token){
