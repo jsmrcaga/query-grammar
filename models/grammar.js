@@ -26,11 +26,20 @@ class Grammar {
 	}
 
 	__rule(rule){
-
+		let r = this.__rules.find(r => r.name === rule.name);
+		if(r){
+			return console.warn(`Rule ${r.name} already registered`);
+		}
+		this.__rules.push(rule);
 	}
 
 	toJSON(){
+		let tokens = this.__tokens.map(t => t.toJSON());
 
+		return JSON.stringify({
+			name: this.name,
+			tokens: tokens
+		});
 	}
 }
 
@@ -44,10 +53,7 @@ Grammar.fromJSON = function(json){
 		let t = new g.Token(token.type, token.regex);
 	}
 
-	for(let rule of json.rules){
-		// only tokenized rules can work 😢	
-
-	}
+	return g;
 };
 
 module.exports = Grammar;

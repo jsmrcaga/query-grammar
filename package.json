@@ -1,6 +1,6 @@
 {
   "name": "grmr",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "A simple module to create query grammars and parsers in full JS (not PEG, not compiled)",
   "main": "index.js",
   "directories": {

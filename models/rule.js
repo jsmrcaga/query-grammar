@@ -4,6 +4,8 @@ function rule_factory(grammar){
 			this.name = name;
 			this.fun = tokens_or_func;
 			this.exec = exec || null;
+
+			grammar.__rule(this);
 		}
 
 		acceptsSubRules(off=true){
@@ -35,7 +37,8 @@ function rule_factory(grammar){
 
 		__test_queue(tokens){
 			if(this.fun instanceof Array){
-				// loop through array
+				// TODO: test for instanceof Rule to test directly
+				// instead of looping through them all
 				if(tokens.length !== this.fun.length){
 					return false;
 				}

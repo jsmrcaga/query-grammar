@@ -21,6 +21,13 @@ function token_factory(grammar){
 				exec: this.regex.exec(string)
 			}
 		}
+
+		toJSON(){
+			return {
+				type: this.type,
+				regex: this.__regex
+			};
+		}
 	}
 
 	return Token;
