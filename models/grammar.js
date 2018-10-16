@@ -43,6 +43,8 @@ class Grammar {
 	}
 }
 
+Grammar.GrammarError = require('./error');
+
 Grammar.fromJSON = function(json){
 	if(typeof json === 'string'){
 		json = JSON.parse(json);
