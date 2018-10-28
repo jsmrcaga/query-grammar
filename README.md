@@ -1,8 +1,8 @@
 # GRMR
 
-Grmr is a simple parser for language creation (parser & lexer). It is intended for all intents and purposes but offers some pre-created Rules and Tokens
+Grmr is a simple parser for language creation (parser & lexer). It is intended for all intents and purposes but offers some pre-created Rules and Tokens.
 
-Inspired by (the awesome Scryfall search engine)[https://scryfall.com].
+Inspired by [the awesome Scryfall search engine](https://scryfall.com).
 
 ## Usage
 
